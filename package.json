@@ -1,0 +1,27 @@
+{
+  "name": "riss-paper-notification-system",
+  "version": "1.0.0",
+  "description": "Automated notification system for RISS papers with '주역' keyword",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && nodemon index.js",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && node index.js",
+    "setup": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [
+    "riss",
+    "paper",
+    "notification",
+    "email",
+    "crawler"
+  ],
+  "author": "RISS Notification Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
